@@ -3,7 +3,7 @@
 // =================================================================
 // 1. IMPORTAÇÕES E CONFIGURAÇÃO INICIAL
 // =================================================================
-require('dotenv').config(); // Carrega as variáveis de ambiente do arquivo .env
+require('dotenv/config').config(); // Carrega as variáveis de ambiente do arquivo .env
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
