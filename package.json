@@ -2,11 +2,11 @@
   "name": "ecommerce-completo-backend",
   "version": "1.0.0",
   "description": "Backend para a aplicação de e-commerce de roupas com Node, Express e MongoDB.",
-  "main": "backend/server.js",
+  "main": "server.js",
   "type": "commonjs",
   "scripts": {
-    "start": "node backend/server.js",
-    "dev": "nodemon backend/server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "author": "Acacio Faria",
   "license": "ISC",
