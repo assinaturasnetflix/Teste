@@ -1,28 +1,57 @@
 {
-  "name": "ecommerce-completo-backend",
+  "name": "ecommerce-monorepo-raiz",
   "version": "1.0.0",
-  "description": "Backend para a aplicação de e-commerce de roupas com Node, Express e MongoDB.",
-  "main": "server.js",
-  "type": "commonjs",
+  "description": "Projeto completo de e-commerce com frontend e backend na mesma raiz.",
+  "type": "module",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev:backend": "nodemon server.js",
+    "dev:frontend": "vite",
+    "dev": "concurrently \"npm:dev:backend\" \"npm:dev:frontend\"",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "start": "node server.js"
   },
   "author": "Acacio Faria",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.6.2",
     "bcryptjs": "^2.4.3",
     "cloudinary": "^1.41.0",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "express-validator": "^7.0.1",
+    "framer-motion": "^10.16.16",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.0.0",
+    "lucide-react": "^0.294.0",
+    "mongoose": "^8.0.2",
     "multer": "^1.4.5-lts.1",
-    "multer-storage-cloudinary": "^4.0.0"
+    "multer-storage-cloudinary": "^4.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
+    "react-router-dom": "^6.20.1",
+    "zustand": "^4.4.7"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.4",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "@vitejs/plugin-react": "^4.2.0",
+    "autoprefixer": "^10.4.16",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.53.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.4",
+    "nodemon": "^3.0.1",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.6",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.0"
   }
 }
